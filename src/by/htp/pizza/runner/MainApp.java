@@ -11,7 +11,7 @@ public class MainApp {
 		
 		Pizza pizza1 = phouse.cookPizza();
 		
-		System.out.println("Your pizza: " + pizza1.title + " " + pizza1.size);
+		System.out.println("Your order is ready: " + pizza1.title + " " + pizza1.size);
 
 	}
 
