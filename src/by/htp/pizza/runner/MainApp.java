@@ -8,10 +8,17 @@ public class MainApp {
 	public static void main(String[] args) {
 
 		PizzaHouse phouse = new PizzaHouse();
-		
-		Pizza pizza1 = phouse.cookPizza();
-		
-		System.out.println("Your order is ready: " + pizza1.title + " " + pizza1.size);
+
+		while (true) {
+			Pizza pizza = phouse.cookPizza();
+			if (pizza == null) {
+				System.out.println("Goodbye!");
+				break;
+			}
+
+			System.out.println("Your order #" + pizza.orderNum + " is ready: " + pizza.title + "/" + pizza.size + "/"
+					+ pizza.topings + "\n");
+		}
 
 	}
 
